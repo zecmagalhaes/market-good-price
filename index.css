@@ -17,3 +17,12 @@ body {
     border-radius: 0.75rem;
     padding: 1rem;
 }
+
+.product-card img {
+    object-fit: contain;
+    height: 150px;
+}
+
+.price {
+    color: var(--brand);
+}
