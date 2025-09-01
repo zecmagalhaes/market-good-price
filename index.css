@@ -6,3 +6,8 @@
 body {
     scroll-behavior: smooth;
 }
+
+.navbar-toggler-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
