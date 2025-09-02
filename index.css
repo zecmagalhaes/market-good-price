@@ -3,6 +3,10 @@
     --brand-2: #0d6efd;
 }
 
+html {
+    scroll-padding-top: 72px;
+}
+
 body {
     scroll-behavior: smooth;
 }
