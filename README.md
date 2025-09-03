@@ -2,11 +2,27 @@
 
 ## Descrição do projeto
 
-Site institucional para o Minimercado Bom Preço, desenvolvido em HTML5, com foco na apresentação dos produtos e serviços oferecidos pelo estabelecimento.
+Site institucional para o Minimercado Bom Preço, com foco na apresentação dos produtos, e serviços oferecidos pelo estabelecimento, como agendamento de entregas/retiradas, entre outros.
+
+<img src="assets/project.gif" />
 
 ## Tecnologias utilizadas
 
 - HTML5
+- Bootstrap 5.3.8 (CDN)
+- JavaScript
+
+## Novas funcionalidades
+
+- UI responsiva com Bootstrap 5.3.8
+- Carrossel acessível com rótulos ARIA e legendas
+- Formulário de cadastro & agendamento
+- Campos de contato e endereços
+- Preferência de recebimento (tele-entrega/retirada)
+- Validações personalizadas (datas/horários, obrigatoriedade)
+- Modal de confirmação antes de concluir
+- Toast de sucesso após confirmar
+- Google Maps incorporado na seção “Venha nos visitar!”.
 
 ## Estrutura do código
 
@@ -20,9 +36,7 @@ Caso deseje visualizar o projeto localmente, abra um terminal e rode:
 git clone git@github.com:zecmagalhaes/market-good-price.git
 ```
 
-Certifique-se de que a pasta assets/images contém todas as imagens referenciadas
-
-Abra o arquivo `index.html` em qualquer navegador web ou, inicie a aplicação através da extensão `Live Server`.
+Abra o arquivo `index.html` em qualquer navegador web ou, inicie a aplicação utilizando o VSCode através da extensão `Live Server`, clicando em `Go Live` no rodapé da IDE.
 
 ## Funcionalidades da página
 
@@ -34,9 +48,9 @@ A página web está organizada em seções que podem ser acessadas facilmente pe
 
 No topo da página, o menu de navegação permite que o usuário salte para as seções principais:
 
-- Início: Leva à seção de boas-vindas
-- Produtos: Exibe as categorias e itens disponíveis
+- Produtos: Exibe os produtos separados por categorias
 - Serviços: Apresenta os serviços adicionais oferecidos
+- Cadastro e Agendamento: Seção para inserir informações para agendamentos
 
 ### 3. Catálogo de produtos
 

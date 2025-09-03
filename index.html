@@ -2,125 +2,486 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link href="./index.css" rel="stylesheet" />
+
     <title>Minimercado Bom Preço</title>
 </head>
 
 <body>
-    <header>
-        <h1>Minimercado Bom Preço</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="#products">Produtos</a></li>
-                <li><a href="#services">Serviços</a></li>
-            </ul>
-        </nav>
-        <hr />
-    </header>
+    <nav class="navbar navbar-expand-lg bg-success sticky-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand px-4 fs-4 fw-semibold" href="#">Minimercado Bom Preço</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <main>
-        <div>
-            <h2>Bem-vindo ao Minimercado Bom Preço!</h2>
-            <p>Aqui você encontra qualidade e economia todos os dias. Oferecemos os melhores produtos com preços justos
-                e serviços convenientes para facilitar seu dia a dia.</p>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#schedule">Cadastro &amp; Agendamento</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
 
-        <section>
-            <h2 id="products">Produtos</h2>
+    <section class="my-4">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" aria-roledescription="carousel"
+            aria-label="Destaques do minimercado">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1: Hortifruti"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
+                    aria-label="Slide 2: Bebidas"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
+                    aria-label="Slide 3: Padaria"></button>
+            </div>
 
-            <div>
-                <h3>Hortifruti</h3>
-                <div>
-                    <img src="assets/images/banana.png" alt="Banana" width="220" height="220">
-                    <p>Banana Nanica - R$ 5,00/kg</p>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/images/fruits-carousel.png" class="d-block w-100"
+                        style="max-height: 300px; object-fit: cover"
+                        alt="Cestas de frutas frescas organizadas; destaque para maçãs, bananas e uvas." />
+                    <div class="carousel-caption">
+                        <h5 class="text-white">Hortifruti sempre fresco e livre de agrotóxicos</h5>
+                        <p class="text-white">Colhidos de produtores locais</p>
+                    </div>
                 </div>
-                <div>
-                    <img src="assets/images/apple.png" alt="Maça" width="220" height="220">
-                    <p>Maçã Gala - R$ 6,50/kg</p>
+                <div class="carousel-item">
+                    <img src="./assets/images/drinks-carousel.png" class="d-block w-100"
+                        style="max-height: 300px; object-fit: cover"
+                        alt="Prateleira de bebidas geladas: refrigerantes, sucos e águas." />
+                    <div class="carousel-caption">
+                        <h5 class="text-white">Bebidas geladas</h5>
+                        <p class="text-white">Do refrigerante ao suco natural</p>
+                    </div>
                 </div>
-                <div>
-                    <img src="assets/images/lemon.png" alt="Limão taiti" width="220" height="220">
-                    <p>Limão Taiti - R$ 8,99/kg</p>
+                <div class="carousel-item">
+                    <img src="./assets/images/bakery-carousel.png" class="d-block w-100"
+                        style="max-height: 300px; object-fit: cover"
+                        alt="Vitrine de padaria com pães e bolos recém-assados." />
+                    <div class="carousel-caption">
+                        <h5 class="text-white">Padaria todo dia</h5>
+                        <p class="text-white">Pães e bolos sempre quentinhos</p>
+                    </div>
                 </div>
             </div>
 
-            <div>
-                <h3>Bebidas</h3>
-                <div>
-                    <img src="assets/images/coke.png" alt="Coca-cola" width="150" height="300">
-                    <p>Refrigerante Coca Cola 600ml - R$ 4,99</p>
-                </div>
-                <div>
-                    <img src="assets/images/orange-juice.png" alt="Suco de laranja" width="250" height="250">
-                    <p>Suco de Laranja 1L - R$ 4,50</p>
-                </div>
-                <div>
-                    <img src="assets/images/water.png" alt="Água com gás" width="250" height="250">
-                    <p>Água com gás 1.26L - R$ 3,75</p>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"
+                aria-label="Slide anterior">
+                <span class="carousel-control-prev-icon bg-dark h-25" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
+                aria-label="Próximo slide">
+                <span class="carousel-control-next-icon bg-dark h-25" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </section>
 
-            <div>
-                <h3>Padaria</h3>
-                <div>
-                    <img src="assets/images/bread.png" alt="Pão francês" width="220" height="200">
-                    <p>Pão Francês - R$ 6,00/kg</p>
+    <main class="py-2">
+        <section id="products" class="pt-4 pb-5">
+            <div class="container">
+                <h2 class="my-2">Produtos</h2>
+
+                <h3 class="mt-4 pb-2">Hortifruti</h3>
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card product-card px-2 pt-4 pb-2 h-100 shadow text-bg-light border-0 rounded-4">
+                            <img src="assets/images/banana.png" class="card-img-top"
+                                alt="Banana nanica madura; ideal para café da manhã." />
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">Banana Nanica</h5>
+                                <p class="card-text mb-2">Qualidade e sabor para o seu café da manhã.</p>
+                                <div class="price fw-semibold fs-5 text-end">R$ 5,00/kg</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card product-card px-2 pt-4 pb-2 h-100 shadow text-bg-light border-0 rounded-4">
+                            <img src="assets/images/apple.png" class="card-img-top"
+                                alt="Maçã Gala vermelha e crocante, própria para lanches." />
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">Maçã Gala</h5>
+                                <p class="card-text mb-2">Docinha e crocante, perfeita para lanches.</p>
+                                <div class="price fw-semibold fs-5 text-end">R$ 6,50/kg</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card product-card px-2 pt-4 pb-2 h-100 shadow text-bg-light border-0 rounded-4">
+                            <img src="assets/images/lemon.png" class="card-img-top"
+                                alt="Limão Taiti verde, ideal para sucos e temperos." />
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">Limão Taiti</h5>
+                                <p class="card-text mb-2">Refrescância garantida para suas receitas.</p>
+                                <div class="price fw-semibold fs-5 text-end">R$ 8,99/kg</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="assets/images/pizza.png" alt="Fatia de pizza" width="220" height="200">
-                    <p>Pizza - R$ 8,00/fatia</p>
+
+                <h3 class="mt-4 pb-2">Bebidas</h3>
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card product-card px-2 pt-4 pb-2 h-100 shadow text-bg-light border-0 rounded-4">
+                            <img src="assets/images/coke.png" class="card-img-top"
+                                alt="Garrafa de Coca-Cola 600 ml gelada." />
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">Refrigerante Coca-Cola 600ml</h5>
+                                <p class="card-text mb-2">Clássico que não pode faltar.</p>
+                                <div class="price fw-semibold fs-5 text-end">R$ 4,99</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card product-card px-2 pt-4 pb-2 h-100 shadow text-bg-light border-0 rounded-4">
+                            <img src="assets/images/orange-juice.png" class="card-img-top"
+                                alt="Caixa de suco de laranja 1 litro." />
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">Suco de Laranja 1L</h5>
+                                <p class="card-text mb-2">Natural e saboroso.</p>
+                                <div class="price fw-semibold fs-5 text-end">R$ 4,50</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card product-card px-2 pt-4 pb-2 h-100 shadow text-bg-light border-0 rounded-4">
+                            <img src="assets/images/water.png" class="card-img-top"
+                                alt="Garrafa de água com gás 1,26 litro." />
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">Água com gás 1.26L</h5>
+                                <p class="card-text mb-2">Refrescância e leveza.</p>
+                                <div class="price fw-semibold fs-5 text-end">R$ 3,75</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="assets/images/chocolate-cake.png" alt="Bolo de chocolate" width="220" height="200">
-                    <p>Bolo de Chocolate - R$ 18,00/unidade</p>
+
+                <h3 class="mt-4 pb-2">Padaria</h3>
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card product-card px-2 pt-4 pb-2 h-100 shadow text-bg-light border-0 rounded-4">
+                            <img src="assets/images/bread.png" class="card-img-top"
+                                alt="Pães franceses dourados, recém-assados." />
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">Pão Francês</h5>
+                                <p class="card-text mb-2">Quentinho toda manhã.</p>
+                                <div class="price fw-semibold fs-5 text-end">R$ 6,00/kg</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card product-card px-2 pt-4 pb-2 h-100 shadow text-bg-light border-0 rounded-4">
+                            <img src="assets/images/pizza.png" class="card-img-top"
+                                alt="Fatia de pizza assada com queijo e molho." />
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">Pizza (fatia)</h5>
+                                <p class="card-text mb-2">Diversos sabores.</p>
+                                <div class="price fw-semibold fs-5 text-end">R$ 8,00/fatia</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card product-card px-2 pt-4 pb-2 h-100 shadow text-bg-light border-0 rounded-4">
+                            <img src="assets/images/chocolate-cake.png" class="card-img-top"
+                                alt="Bolo de chocolate com cobertura cremosa." />
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">Bolo de Chocolate</h5>
+                                <p class="card-text mb-2">Cobertura cremosa.</p>
+                                <div class="price fw-semibold fs-5 text-end">R$ 18,00/unidade</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2 id="services">Nossos serviços</h2>
-            <ul>
-                <li>
-                    <div>
-                        <strong>Entrega em domicílio</strong>
-                        <p>Entregamos suas compras na comodidade da sua casa</p>
+        <section id="services" class="pt-4 pb-5 bg-light">
+            <div class="container">
+                <h2>Nossos serviços</h2>
+
+                <div class="row g-3 mt-2">
+                    <div class="col-12 col-md-6">
+                        <div class="card h-100 p-1 shadow-sm border border-2 border-success rounded-3">
+                            <div class="card-body d-flex justify-content-between align-items-start">
+                                <div>
+                                    <p class="fw-semibold fs-5 mb-3 lh-1">Entrega em domicílio</p>
+                                    <p class="mb-0">Entregamos suas compras na comodidade da sua casa</p>
+                                </div>
+                                <span class="badge text-bg-success fw-light fs-6">R$ 5,00</span>
+                            </div>
+                        </div>
                     </div>
-                    <span>R$ 5,00</span>
-                </li>
-                <li>
-                    <div>
-                        <strong>Recarga de celular</strong>
-                        <p>Recarregue seu celular em qualquer caixa</p>
+
+                    <div class="col-12 col-md-6">
+                        <div class="card h-100 p-1 shadow-sm border border-2 border-primary rounded-3">
+                            <div class="card-body d-flex justify-content-between align-items-start">
+                                <div>
+                                    <p class="fw-semibold fs-5 mb-3 lh-1">Recarga de celular</p>
+                                    <p class="mb-0">Recarregue seu celular em qualquer caixa</p>
+                                </div>
+                                <span class="badge text-bg-primary fw-light fs-6">A partir de R$ 10,00</span>
+                            </div>
+                        </div>
                     </div>
-                    <span>A partir de R$ 10,00</span>
-                </li>
-                <li>
-                    <div>
-                        <strong>Pagamento de contas</strong>
-                        <p>Pague suas contas de água, luz, telefone e outras utilidades</p>
+
+                    <div class="col-12 col-md-6">
+                        <div class="card h-100 p-1 shadow-sm border border-2 border-secondary rounded-3">
+                            <div class="card-body d-flex justify-content-between align-items-start">
+                                <div>
+                                    <p class="fw-semibold fs-5 mb-3 lh-1">Pagamento de contas</p>
+                                    <p class="mb-0">Água, luz, telefone e outras utilidades</p>
+                                </div>
+                                <span class="badge text-bg-secondary fw-light fs-6">Taxa R$ 1,00</span>
+                            </div>
+                        </div>
                     </div>
-                    <span>Taxa de R$ 1,00 por conta</span>
-                </li>
-                <li>
-                    <div>
-                        <strong>Embalagem para presentes</strong>
-                        <p>Embalamos seus produtos comprados como presente</p>
+
+                    <div class="col-12 col-md-6">
+                        <div class="card h-100 p-1 shadow-sm border border-2 border-warning rounded-3">
+                            <div class="card-body d-flex justify-content-between align-items-start">
+                                <div>
+                                    <p class="fw-semibold fs-5 mb-3 lh-1">Embalagem para presentes</p>
+                                    <p class="mb-0">Capricho para quem você gosta</p>
+                                </div>
+                                <span class="badge text-bg-warning fw-light fs-6">R$ 3,00 a R$ 10,00</span>
+                            </div>
+                        </div>
                     </div>
-                    <span>Entre R$ 3,00 e R$ 10,00</span>
-                </li>
-            </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule" class="pt-4 pb-5">
+            <div class="container">
+                <h2 class="mb-3">Cadastro do Cliente & Agendamento</h2>
+                <p class="text-muted">
+                    Preencha seus dados e escolha entre <strong>Entrega</strong> ou
+                    <strong>Retirada</strong>. Temos horários em dias úteis e finais de
+                    semana.
+                </p>
+
+                <div class="alert alert-info" role="alert">
+                    <strong>Horários de agendamento:</strong> 09:00 às 20:00.
+                    Agendamentos para o mesmo dia devem ser feitos com, no mínimo, 2
+                    horas de antecedência.
+                </div>
+
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-12 col-md-6">
+                        <label for="name" class="form-label">Nome completo</label>
+                        <input type="text" class="form-control" id="name" placeholder="Nome completo" required />
+                        <div class="invalid-feedback">O campo nome é obrigatório</div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="email@dominio.com" required />
+                        <div class="invalid-feedback">O campo e-mail é obrigatório</div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <label for="phone" class="form-label">Telefone (com DDD)</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Telefone" required />
+                        <div class="invalid-feedback">
+                            O campo telefone é obrigatório
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <label for="registration" class="form-label">CPF</label>
+                        <input type="text" class="form-control" id="registration" placeholder="CPF" required />
+                        <div class="invalid-feedback">
+                            O campo CPF é obrigatório
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <label for="gender" class="form-label">Sexo</label>
+                        <select class="form-select" id="gender" aria-label="gender-select" required>
+                            <option value="" selected>Selecione uma opção</option>
+                            <option value="female">Feminino</option>
+                            <option value="male">Masculino</option>
+                            <option value="others">Outros</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Informe uma opção
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label">Como prefere receber?</label>
+                        <div class="d-flex gap-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="delivery-option" id="delivery"
+                                    value="Tele-entrega" checked />
+                                <label class="form-check-label" for="delivery">Tele-entrega</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="delivery-option" id="withdraw"
+                                    value="Retirar no balcão" />
+                                <label class="form-check-label" for="withdraw">Retirar no balcão</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <label for="street" class="form-label">Endereço</label>
+                        <input type="text" class="form-control" id="street" placeholder="Endereço (com número)"
+                            required />
+                        <div class="invalid-feedback">É obrigatório informar o endereço com número</div>
+                    </div>
+
+                    <div class="col-12 col-md-3">
+                        <label for="neighborhood" class="form-label">Bairro</label>
+                        <input type="text" class="form-control" id="neighborhood" placeholder="Bairro" required />
+                        <div class="invalid-feedback">É obrigatório informar o bairro</div>
+                    </div>
+
+                    <div class="col-12 col-md-3">
+                        <label for="city" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="city" placeholder="Cidade" required />
+                        <div class="invalid-feedback">É obrigatório informar a cidade</div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <label for="date" class="form-label">Data</label>
+                        <input type="date" class="form-control" id="date" required />
+                        <div class="invalid-feedback" id="date-feedback"></div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <label for="time" class="form-label">Hora</label>
+                        <input type="time" class="form-control" id="time" required />
+                        <div class="invalid-feedback" id="time-feedback"></div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="observations" class="form-label">Observações</label>
+                        <textarea class="form-control" id="observations" rows="3"
+                            placeholder="Ex.: interfone não está funcionando, deixar na portaria, etc."></textarea>
+                    </div>
+
+                    <div class="form-check mx-3">
+                        <input class="form-check-input" type="checkbox" value="" id="newsletter" checked>
+                        <label class="form-check-label" for="newsletter">
+                            Desejo receber novidades via e-mail ou whatsapp
+                        </label>
+                    </div>
+
+                    <div class="col-12 d-flex gap-2">
+                        <button class="btn btn-success" type="submit">
+                            Finalizar agendamento
+                        </button>
+                        <button class="btn btn-outline-secondary" type="reset">
+                            Limpar formulário
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="location" class="pt-4 pb-5 mb-4 bg-light">
+            <div class="container">
+                <h2 class="mb-4">Venha nos visitar!</h2>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="ratio ratio-21x9 rounded-3 shadow-sm">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27871.95856028943!2d-51.5203604880692!3d-29.164824898643126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c3b57515b97b5%3A0x9eb0f508d94e230!2sMercado%20del%20Miro!5e0!3m2!1spt-BR!2sbr!4v1756850507130!5m2!1spt-BR!2sbr"
+                                width="600" height="450" style="border: 0; border-radius: 12px;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <hr />
-        <p>© 2025 Minimercado Bom Preço - Todos os direitos reservados.</p>
-        <p><a href="https://zecmagalhaes.github.io/dev-profile/">Desenvolvido por Zecbauer</a></p>
-        <p><a href="mailto:emagalhes66@gmail.com">E-mail</a></p>
-        <p><a href="https://wa.me/555496296677" target="_blank">Enviar mensagem no whatsapp</a></p>
+    <footer class="py-4 border-top border-2 border-success bg-white">
+        <div class="container small">
+            <div class="row g-3 align-items-center">
+                <div class="col-12 col-md-4">
+                    © 2025 Minimercado Bom Preço - Todos os direitos reservados
+                </div>
+                <div class="col-12 col-md-8 text-md-end">
+                    <a href="mailto:emagalhes66@gmail.com" class="me-3 text-dark text-decoration-none">
+                        E-mail
+                    </a>
+                    <a href="https://wa.me/555496296677" target="_blank" class="me-3 text-dark text-decoration-none">
+                        WhatsApp
+                    </a>
+                    <a href="https://zecmagalhaes.github.io/dev-profile/" target="_blank"
+                        class="text-dark text-decoration-none">
+                        Desenvolvido por Zecbauer
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="successToast" class="toast text-bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body">
+                Seu agendamento foi concluído com sucesso!
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="appointmentModalLabel">Confirme seu Agendamento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Por favor, confira os dados do seu agendamento:</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Nome:</strong> <span id="modal-name"></span></li>
+                        <li class="list-group-item"><strong>E-mail:</strong> <span id="modal-email"></span></li>
+                        <li class="list-group-item"><strong>Telefone:</strong> <span id="modal-phone"></span></li>
+                        <li class="list-group-item"><strong>CPF:</strong> <span id="modal-registration"></span></li>
+                        <li class="list-group-item"><strong>Receber:</strong> <span id="modal-delivery-type"></span>
+                        </li>
+                        <li class="list-group-item"><strong>Endereço:</strong> <span id="modal-address"></span></li>
+                        <li class="list-group-item"><strong>Data:</strong> <span id="modal-date"></span></li>
+                        <li class="list-group-item"><strong>Hora:</strong> <span id="modal-time"></span></li>
+                        <li class="list-group-item"><strong>Observações:</strong> <span id="modal-observations"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Corrigir</button>
+                    <button type="button" class="btn btn-success" id="confirmButton">Confirmar Agendamento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="validations.js"></script>
 </body>
 
 </html>
